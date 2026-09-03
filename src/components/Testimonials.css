@@ -1,0 +1,218 @@
+.testimonials-section {
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 70px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 229, 212, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out, visibility 0.6s;
+  transform: scale(0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.testimonial-image-container {
+  border: 2px solid var(--primary-color, #00e5d4);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 460px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 229, 212, 0.25);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.transformation-img {
+  max-width: 100%;
+  max-height: 440px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide Nav buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 229, 212, 0.03);
+  border: 1px solid rgba(0, 229, 212, 0.15);
+  color: var(--text-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition-smooth);
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color, #00e5d4);
+  color: #000000;
+  border-color: var(--primary-color, #00e5d4);
+  box-shadow: 0 0 15px rgba(0, 229, 212, 0.5);
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 4px;
+  background: rgba(0, 229, 212, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border-radius: 2px;
+}
+
+.carousel-dot.active {
+  background: var(--primary-color, #00e5d4);
+  width: 20px;
+  box-shadow: 0 0 8px var(--primary-color, #00e5d4);
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 16px 8px;
+  }
+  .carousel-btn {
+    display: none;
+  }
+  .carousel-track {
+    min-height: 280px;
+  }
+  .testimonial-card {
+    gap: 10px;
+  }
+  .testimonial-image-container {
+    width: 100%;
+    max-width: 280px;
+    max-height: 270px;
+    padding: 3px;
+  }
+  .transformation-img {
+    max-height: 260px;
+  }
+  .testimonial-rating {
+    justify-content: center;
+  }
+  .carousel-dots {
+    gap: 4px;
+    margin-top: 14px;
+  }
+  .carousel-dot {
+    width: 7px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  .carousel-dot.active {
+    width: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper {
+    padding: 12px 4px;
+  }
+  .testimonial-image-container {
+    max-width: 240px;
+    max-height: 230px;
+  }
+  .transformation-img {
+    max-height: 220px;
+  }
+  .carousel-dots {
+    gap: 3px;
+    margin-top: 10px;
+  }
+  .carousel-dot {
+    width: 5px;
+    height: 3px;
+  }
+  .carousel-dot.active {
+    width: 12px;
+  }
+}
+

@@ -1,0 +1,19 @@
+/* App.css — Global viewport overflow prevention & compact responsive scaling */
+
+html, body, #root, main, 
+.homepage-wrapper, 
+.testimonials-page-wrapper, 
+.about-page-wrapper, 
+.career-page-wrapper, 
+.query-page-wrapper, 
+.trainers-page-wrapper {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-layout-wrapper,
+.page-main-content {
+  display: unset;
+}

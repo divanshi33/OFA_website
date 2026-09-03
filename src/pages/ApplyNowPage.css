@@ -1,0 +1,114 @@
+/* ── Apply Now Page Styles ── */
+.apply-page-wrapper {
+  background: #000000;
+  color: #ffffff;
+  padding: 50px 0 90px;
+  min-height: 80vh;
+}
+
+.apply-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00e5d4;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  transition: gap 0.2s ease;
+}
+
+.apply-back-link:hover {
+  gap: 12px;
+}
+
+.apply-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 44px 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 229, 212, 0.25);
+}
+
+.apply-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.apply-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.apply-desc {
+  font-size: 1rem;
+  color: #a0aec0;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fresher-note-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(0, 229, 212, 0.08);
+  border: 1px solid rgba(0, 229, 212, 0.2);
+  color: #00e5d4;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.apply-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.apply-success-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 16px;
+}
+
+.apply-success-box h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.apply-success-box p {
+  color: #a0aec0;
+  max-width: 500px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .apply-form-container {
+    padding: 24px 20px;
+  }
+  .apply-title {
+    font-size: 1.8rem;
+  }
+}

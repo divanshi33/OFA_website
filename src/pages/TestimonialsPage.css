@@ -1,0 +1,214 @@
+/* ═══════════════════════════════════════
+   TestimonialsPage.css — Compact & Responsive
+   ═══════════════════════════════════════ */
+
+.testimonials-page-wrapper {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.section-testimonials {
+  padding: 60px 5% 50px;
+}
+
+.carousel-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  position: relative;
+  border-radius: 16px;
+}
+
+.carousel-track {
+  width: 100%;
+  min-height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.testimonial-image-container {
+  width: 100%;
+  max-width: 520px;
+  max-height: 460px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid var(--primary-color, #00e5d4);
+  box-shadow: 0 0 25px rgba(0, 229, 212, 0.25);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.transformation-img {
+  max-width: 100%;
+  max-height: 440px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 229, 212, 0.08);
+  border: 1px solid rgba(0, 229, 212, 0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition-smooth);
+}
+.carousel-btn:hover {
+  background: var(--primary-color);
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 229, 212, 0.5);
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+.carousel-dot {
+  width: 8px; height: 4px;
+  background: rgba(0, 229, 212, 0.25);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.carousel-dot.active {
+  background: var(--primary-color);
+  width: 20px;
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* BMI CALCULATOR */
+.bmi-section-ofa {
+  padding: 60px 5% 70px;
+  background: var(--bg-secondary);
+}
+
+.bmi-container {
+  max-width: 850px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.bmi-form-title { font-size: 1.25rem; margin-bottom: 8px; }
+.bmi-intro { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px; }
+.bmi-form { display: flex; flex-direction: column; gap: 14px; }
+.bmi-btn-row { display: flex; gap: 10px; margin-top: 6px; }
+
+.bmi-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 12px;
+}
+.bmi-placeholder-ring {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 229, 212, 0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: rgba(0, 229, 212, 0.4);
+}
+
+.bmi-result { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+.bmi-val-display { display: flex; flex-direction: column; }
+.bmi-num { font-family: var(--font-heading); font-size: 2.8rem; color: var(--primary-color); font-weight: 900; line-height: 1; }
+.bmi-label { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--text-muted); }
+.bmi-cat { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; }
+.bmi-gauge { display: flex; flex-direction: column; gap: 4px; }
+.bmi-gauge-bar { position: relative; height: 10px; border-radius: 5px; display: flex; }
+.gauge-seg { flex: 1; }
+.gauge-seg.uw { background: #60a5fa; border-radius: 5px 0 0 5px; }
+.gauge-seg.nw { background: #34d399; }
+.gauge-seg.ow { background: #fbbf24; }
+.gauge-seg.ob { background: #f87171; border-radius: 0 5px 5px 0; }
+.bmi-needle { position: absolute; top: -3px; width: 3px; height: 16px; transform: translateX(-50%); transition: left 0.4s ease; }
+.needle-tip { width: 12px; height: 12px; background: #fff; border: 2px solid var(--primary-color); border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.bmi-gauge-labels { display: flex; justify-content: space-between; font-size: 9px; color: var(--text-muted); }
+.bmi-advice { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+
+@media (max-width: 768px) {
+  .section-testimonials, .bmi-section-ofa { padding: 30px 3% 24px; }
+  .carousel-wrapper { padding: 16px 8px; }
+  .carousel-btn { display: none; }
+  .carousel-track { min-height: 280px; }
+  .testimonial-card { gap: 10px; }
+  .testimonial-image-container { width: 100%; max-width: 280px; max-height: 270px; padding: 3px; }
+  .transformation-img { max-height: 260px; }
+  .testimonial-rating { justify-content: center; }
+  .carousel-dots { gap: 4px; margin-top: 14px; }
+  .carousel-dot { width: 7px; height: 4px; border-radius: 2px; }
+  .carousel-dot.active { width: 16px; }
+  .bmi-container { grid-template-columns: 1fr; padding: 20px 16px; gap: 20px; }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper { padding: 12px 4px; }
+  .testimonial-image-container { max-width: 240px; max-height: 230px; }
+  .transformation-img { max-height: 220px; }
+  .carousel-dots { gap: 3px; margin-top: 10px; }
+  .carousel-dot { width: 5px; height: 3px; }
+  .carousel-dot.active { width: 12px; }
+}
